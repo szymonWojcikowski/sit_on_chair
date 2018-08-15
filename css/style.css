@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'raleway';
+    src: url('raleway-bold-webfont.woff2') format('woff2'),
+         url('raleway-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('raleway-light-webfont.woff2') format('woff2'),
+         url('raleway-light-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('raleway-regular-webfont.woff2') format('woff2'),
+         url('raleway-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'raleway', Arial, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.box {
+    width: 33%;
+    height: 200px;
+}
+
+
+.color--alt {
+    color: #27c7ab;
+}
+
+.btn {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    background-color: #27c7ab;
+    color: #FFFFFF;
+    padding: 0 20px;
+    border-radius: 6px;
+    border: 0 solid #27c7ab;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+header {
+    height: 40px;
+    line-height: 40px;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+header .flex h1, header .flex nav {
+    flex-basis: 50%;
+}
+
+.menu {
+    background-color: #000000;
+}
+
+.menu.flex li {
+    flex-basis: calc(100% / 3);
+    position: relative;
+}
+
+.menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: -1;
+    top: calc(-100% - 60px);
+    padding: 10px;
+    transition: top .4s;
+}
+
+.dropdown a {
+    text-transform: initial;
+}
+
+.menu li:hover > .dropdown {
+    top: calc(100% + 10px);
+    transition: top .4s;
+}
+
+ul {
+    list-style: none;
+}
+
+.slider {
+    /*width: 1200px;*/
+    /*height: 500px;*/
+}
+
+.slide-container {
+    position: relative;
+}
+
+.slide-layer {
+    position: absolute;
+    top: 25%;
+    left: 55%;
+    right: 10%;
+    text-align: center;
+}
+
+.slide-layer p {
+    margin: 10px 0;
+}
+
+
+.plan-select input[type="radio"] {
+    visibility: hidden;
+}
+
+.plan-select .flex {
+    justify-content: space-around;
+}
+
+.plan-select .flex li {
+    flex-basis: calc(100% / 3 - 120px);
+    padding: 20px 25px;
+}
+
+input[type="radio"]:checked + .card {
+    background-color: #27c7ab;
+}
