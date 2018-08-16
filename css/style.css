@@ -24,7 +24,13 @@
 
 body {
     font-family: 'raleway', Arial, Tahoma, sans-serif;
+    font-size: 12px;
     box-sizing: border-box;
+}
+
+sup {
+    font-size: .8rem;
+    vertical-align: super;
 }
 
 .flex {
@@ -61,6 +67,8 @@ body {
 section {
     margin-bottom: 20px;
 }
+
+/*------header& nav > .menu-------*/
 
 header {
     height: 40px;
@@ -109,6 +117,8 @@ ul {
     list-style: none;
 }
 
+/*------section .slider-------*/
+
 .slider {
     /*width: 1200px;*/
     /*height: 500px;*/
@@ -130,6 +140,23 @@ ul {
     margin: 10px 0;
 }
 
+/*------section .products-------*/
+
+.products figure {
+    position: relative;
+}
+
+
+.products figure figcaption {
+    position: absolute;
+    bottom: 20px;
+    box-sizing: border-box;
+    width: calc(100% - 10px);
+    padding: 15px;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+/*------section .plan-select-------*/
 
 .plan-select input[type="radio"] {
     visibility: hidden;
@@ -141,9 +168,74 @@ ul {
 
 .plan-select .flex li {
     flex-basis: calc(100% / 3 - 120px);
-    padding: 20px 25px;
+    padding: 5px 25px;
 }
 
 input[type="radio"]:checked + .card {
     background-color: #27c7ab;
+}
+
+.card {
+    position: relative;
+    border: 1px solid #27c7ab;
+}
+
+.card:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    margin-left: -8px;
+    background-color: #27c7ab;
+    border: 8px solid #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #27c7ab;
+}
+
+.card h3 {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.offer {
+    margin-top: 15px;
+    background-color: #CCC;
+}
+
+.offer li:nth-child(even) {
+    background-color: #FFF;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    line-height: 20px;
+    padding: 10px;
+    margin: 5px auto 0;
+    border: 1px solid #27c7ab;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.currency {
+    text-transform: uppercase;
+}
+
+.price {
+    font-size: 1.5rem;
+}
+
+
+/*------section .contact-form-------*/
+
+/*------footer-------*/
+
+.socials li {
+    display: inline-block;
+    
 }
