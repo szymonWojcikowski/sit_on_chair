@@ -4,19 +4,94 @@
     margin-top: 5px;
     width: 80%;
     outline: 2px solid #3fa39c;
-        
     animation-duration: 2s;
     animation-name: emphasis;
     animation-iteration-count: 1;
 }
 
-
 @keyframes emphasis {
-  from {
-    width: 0; 
-  }
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
 
-  to {
-    width: 80%;
-  }
+section {
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+
+.slider {
+    animation-name: cascading1;
+}
+
+.products {
+    animation-name: cascading2;
+}
+
+.plan-select {
+    animation-name: cascading3;
+}
+
+.contact-form {
+    animation-name: cascading4;
+}
+
+@keyframes cascading1 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes cascading2 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes cascading3 {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes cascading4 {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
