@@ -1,29 +1,29 @@
 @font-face {
-    font-family: 'raleway';
-    src: url('raleway-bold-webfont.woff2') format('woff2'),
-         url('raleway-bold-webfont.woff') format('woff');
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'raleway';
-    src: url('raleway-light-webfont.woff2') format('woff2'),
-         url('raleway-light-webfont.woff') format('woff');
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-light-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-light-webfont.woff') format('woff');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'raleway';
-    src: url('raleway-regular-webfont.woff2') format('woff2'),
-         url('raleway-regular-webfont.woff') format('woff');
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-regular-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 body {
-    font-family: 'raleway', Arial, Tahoma, sans-serif;
+    font-family: "Raleway", Arial, Tahoma, sans-serif;
     font-size: 12px;
     box-sizing: border-box;
 }
@@ -54,6 +54,7 @@ sup {
 }
 
 .btn {
+    text-align: center;
     height: 2rem;
     line-height: 2rem;
     font-size: 1.2rem;
@@ -166,16 +167,41 @@ ul {
     justify-content: space-around;
 }
 
-.plan-select .flex li {
-    flex-basis: calc(100% / 3 - 120px);
-    padding: 5px 25px;
+.plan-select .flex > li {
+/*    flex-basis: calc(100% / 3 - 120px);*/
+    flex: 1 0 calc(100% / 3 - 120px);
+    padding: 10px 20px;
 }
 
 input[type="radio"]:checked + .card {
     background-color: #27c7ab;
+/*    border: 1px solid #ffffff;*/
+}
+
+input[type="radio"]:checked + .card:before {
+    background-color: #FFFFFF;
+    border: 8px solid #27c7ab;
+    box-shadow: 0 0 0 1px #FFFFFF;
+}
+
+input[type="radio"]:checked + .card h3 {
+    color: #FFFFFF;
+}
+
+input[type="radio"]:checked + .card .circle {
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}
+
+input[type="radio"]:checked + .card label {
+    background-color: #FFFFFF;
+    color: #27c7ab;
 }
 
 .card {
+    display: flex;
+    flex-flow: column wrap;
+/*    align-content: center;*/
     position: relative;
     border: 1px solid #27c7ab;
 }
@@ -207,8 +233,19 @@ input[type="radio"]:checked + .card {
     background-color: #CCC;
 }
 
+.offer > li {
+    padding: 5px 20px;
+    text-align-last: center;
+}
+
 .offer li:nth-child(even) {
     background-color: #FFF;
+}
+
+.card label {
+    width: 40%;
+    margin: 10px auto;
+    text-transform: uppercase;
 }
 
 .circle {
@@ -228,14 +265,51 @@ input[type="radio"]:checked + .card {
 
 .price {
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 
-/*------section .contact-form-------*/
 
+/*------section .contact-form-------*/
+.contact-form legend {
+    width: 40%; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.contact-form .wrapper .flex {
+    width: 100%;
+    display: flex;
+}
+
+.form-data {
+    flex: 2 0 66%;
+    display: flex;
+    flex-flow: column wrap;
+}
+.form-check-and-submit {
+    flex: 1 0 33%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.contact-form img, .contact-form input[type="checkbox"], .contact-form input[type="submit"] {
+
+}
+
+.contact-form label {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
 /*------footer-------*/
 
 .socials li {
     display: inline-block;
-    
 }

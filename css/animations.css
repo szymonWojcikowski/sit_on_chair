@@ -1,9 +1,7 @@
 .emphasis:after {
     content: "";
     display: block;
-/*    height: 4px;*/
-/*    width: 0px;*/
-/*    background-color: #3fa39c;*/
+    margin-top: 5px;
     width: 80%;
     outline: 2px solid #3fa39c;
         
