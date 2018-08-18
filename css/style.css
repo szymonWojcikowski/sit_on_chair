@@ -22,6 +22,10 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Raleway", Arial, Tahoma, sans-serif;
     font-size: 12px;
@@ -43,18 +47,13 @@ sup {
     padding: 0 30px;
 }
 
-.box {
-    width: 33%;
-    height: 200px;
-}
-
-
 .color--alt {
     color: #27c7ab;
 }
 
 .btn {
     text-align: center;
+    text-transform: uppercase;
     height: 2rem;
     line-height: 2rem;
     font-size: 1.2rem;
@@ -71,7 +70,15 @@ section {
 
 /*------header& nav > .menu-------*/
 
+header ~ section {
+    margin-top: 40px;
+}
+
 header {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    width: 100%;
     height: 40px;
     line-height: 40px;
     background-color: #000000;
@@ -95,6 +102,7 @@ header .flex h1, header .flex nav {
 .menu a {
     color: #FFFFFF;
     text-decoration: none;
+    font-weight: 700;
 }
 
 .dropdown {
@@ -107,6 +115,7 @@ header .flex h1, header .flex nav {
 
 .dropdown a {
     text-transform: initial;
+    font-weight: 400;
 }
 
 .menu li:hover > .dropdown {
@@ -138,15 +147,38 @@ ul {
 }
 
 .slide-layer p {
-    margin: 10px 0;
+    margin: 15px 0;
+}
+
+.slide-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 /*------section .products-------*/
+.products {
+    margin-bottom: 45px;
+}
+
+.products .flex {
+    justify-content: space-around;
+}
+
 
 .products figure {
     position: relative;
+    flex: 1 0 calc(100% / 3 - 120px);
+    display: flex;
+    flex-flow: row wrap;
 }
 
+.products figure img {
+    flex-basis: 100%;
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+}
 
 .products figure figcaption {
     position: absolute;
@@ -155,6 +187,21 @@ ul {
     width: calc(100% - 10px);
     padding: 15px;
     background-color: rgba(255, 255, 255, .3);
+}
+
+.box {
+    flex: 1 0 calc(100% / 3 - 120px);
+    border: 1px solid #DADADA;
+    border-radius: 1px;
+    margin: 0px 20px;
+}
+
+.box h1 {
+    margin: 40px 20px 15px;
+}
+
+.box p {
+    margin: 15px 20px;
 }
 
 /*------section .plan-select-------*/
@@ -168,8 +215,8 @@ ul {
 }
 
 .plan-select .flex > li {
-/*    flex-basis: calc(100% / 3 - 120px);*/
     flex: 1 0 calc(100% / 3 - 120px);
+    align-items: stretch;
     padding: 10px 20px;
 }
 
@@ -201,8 +248,10 @@ input[type="radio"]:checked + .card label {
 .card {
     display: flex;
     flex-flow: column wrap;
-/*    align-content: center;*/
+    align-content: space-around;
+    height: 100%;
     position: relative;
+    padding-bottom: 3rem;
     border: 1px solid #27c7ab;
 }
 
@@ -214,7 +263,7 @@ input[type="radio"]:checked + .card label {
     position: absolute;
     top: -22px;
     left: 50%;
-    margin-left: -8px;
+    margin-left: -16px;
     background-color: #27c7ab;
     border: 8px solid #FFFFFF;
     border-radius: 50%;
@@ -229,6 +278,7 @@ input[type="radio"]:checked + .card label {
 }
 
 .offer {
+    width: 100%;
     margin-top: 15px;
     background-color: #CCC;
 }
@@ -239,20 +289,27 @@ input[type="radio"]:checked + .card label {
 }
 
 .offer li:nth-child(even) {
-    background-color: #FFF;
+    background-color: #F1F1F1;
+}
+
+.offer li:nth-child(odd) {
+    background-color: #E4E4E4;
 }
 
 .card label {
-    width: 40%;
-    margin: 10px auto;
-    text-transform: uppercase;
+    /*align-self: flex-end;*/
+    position: absolute;
+    margin: 20px auto 0;
+    bottom: 10px;
+    left: 30%;
+    right: 30%;
 }
 
 .circle {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     line-height: 20px;
-    padding: 10px;
+    padding: 13px;
     margin: 5px auto 0;
     border: 1px solid #27c7ab;
     border-radius: 50%;

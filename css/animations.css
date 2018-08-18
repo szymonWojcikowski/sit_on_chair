@@ -2,7 +2,7 @@
     content: "";
     display: block;
     margin-top: 5px;
-    width: 80%;
+    width: 70%;
     outline: 2px solid #3fa39c;
     animation-duration: 2s;
     animation-name: emphasis;
@@ -14,7 +14,7 @@
         width: 0;
     }
     to {
-        width: 80%;
+        width: 70%;
     }
 }
 
