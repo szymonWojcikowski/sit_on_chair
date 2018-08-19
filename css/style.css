@@ -54,14 +54,16 @@ sup {
 .btn {
     text-align: center;
     text-transform: uppercase;
-    height: 2rem;
-    line-height: 2rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
     font-size: 1.2rem;
     background-color: #27c7ab;
     color: #FFFFFF;
+    margin-top: 10px;
     padding: 0 20px;
     border-radius: 6px;
     border: 0 solid #27c7ab;
+    cursor: pointer;
 }
 
 section {
@@ -116,6 +118,20 @@ header .flex h1, header .flex nav {
 .dropdown a {
     text-transform: initial;
     font-weight: 400;
+}
+
+.dropdown:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 8px solid black;
 }
 
 .menu li:hover > .dropdown {
@@ -187,6 +203,10 @@ ul {
     width: calc(100% - 10px);
     padding: 15px;
     background-color: rgba(255, 255, 255, .3);
+}
+
+.prod-name {
+    text-transform: uppercase;
 }
 
 .box {
@@ -328,6 +348,11 @@ input[type="radio"]:checked + .card label {
 
 
 /*------section .contact-form-------*/
+
+.contact-form fieldset {
+    padding: 0 20px;
+}
+
 .contact-form legend {
     width: 40%; 
     margin-bottom: 20px;
@@ -352,20 +377,95 @@ input[type="radio"]:checked + .card label {
 
 .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
     margin-bottom: 15px;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    cursor: cell;
+    border: 1px solid #A6E3D3;
 }
 
-.contact-form img, .contact-form input[type="checkbox"], .contact-form input[type="submit"] {
+.contact-form input[type="submit"] {
+    cursor: pointer;
+    align-self: stretch;
+    margin-left: 36px;
+}
 
+
+.contact-form label[for="checkbox"] {
+    margin-top: 30px;
+    padding-left: 36px;
+    font-size: 1rem;
+    color: #C4C4C4;
+}
+/* --- Problem z FF, zamiast input:after ostylować checked + label:after---*/
+.contact-form input[type="checkbox"] {
+    position: relative;
+    width: 48px;
+    height: 40px;
+    float: left;
+    border: 1px ridge #CECECE;
+}
+
+.contact-form input[type="checkbox"]:after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 40px;
+    position: absolute;
+    top: -2px;
+    left: -6px;
+    border: 1px ridge #CECECE;
+    background: #27c7ab;
+}
+
+.contact-form input[type="checkbox"]:checked:after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 40px;
+    position: absolute;
+    top: -2px;
+    left: -6px;
+    border: 1px ridge #CECECE;
+    background: #27c7ab url("../images/form_ok.jpg") no-repeat;
 }
 
 .contact-form label {
     display: inline-block;
     width: 100%;
     padding: 10px;
+    cursor: pointer;
 }
+
+textarea {
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+    padding-left: 5px;
+    color: #DEDEDE;
+}
+
+
+
 /*------footer-------*/
+
+footer .flex {
+    align-items: center;
+}
+
+footer .copy {
+    flex: 4;
+}
+
+footer .socials {
+    flex: 1;
+}
+
+footer h4 {
+    flex: 1;
+    text-transform: uppercase;
+}
+
 
 .socials li {
     display: inline-block;
