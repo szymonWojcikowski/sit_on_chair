@@ -390,13 +390,107 @@ input[type="radio"]:checked + .card label {
 }
 
 
+
+/* --- Problem z FF, zamiast input:after ostylować checked + label:after---*/
+.contact-form input[type="checkbox"] {
+/*
+    position: relative;
+    width: 48px;
+    height: 40px;
+    float: left;
+    border: 1px ridge #CECECE;
+*/  
+    height: 0;
+    visibility: hidden;
+}
+
+.checkbox-holder {
+    position: relative;
+    padding-left: 30px;
+}
+
+
+.contact-form input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 40px;
+    position: absolute;
+    top: 40px;
+    left: 32px;
+    border: 1px ridge #CECECE;
+    background: #27c7ab;
+}
+
+.contact-form input[type="checkbox"]:checked + label:before {
+    content: "";
+    display: inline-block;
+    width: 48px;
+    height: 40px;
+    position: absolute;
+    top: 40px;
+    left: 32px;
+    border: 1px ridge #CECECE;
+    background: #27c7ab url("../images/form_ok.jpg") no-repeat;
+}
+
+.contact-form label {
+    display: inline-block;
+    padding-left: 30px;
+    float: left;
+    cursor: pointer;
+}
+
+.contact-form label[for="checkbox"] {
+    margin: 30px 0;
+    padding-left: 66px;
+    font-size: 1rem;
+    color: #C4C4C4;
+}
+
+textarea {
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+    padding-left: 5px;
+    color: #DEDEDE;
+}
+
+
+
+/*------footer-------*/
+
+footer .flex {
+    align-items: center;
+}
+
+footer .copy {
+    flex: 4;
+}
+
+footer .socials {
+    flex: 1;
+}
+
+footer h4 {
+    flex: 1;
+    text-transform: uppercase;
+}
+
+
+.socials li {
+    display: inline-block;
+}
+
+
+/*-----------------------------------------
 .contact-form label[for="checkbox"] {
     margin-top: 30px;
     padding-left: 36px;
     font-size: 1rem;
     color: #C4C4C4;
 }
-/* --- Problem z FF, zamiast input:after ostylować checked + label:after---*/
 .contact-form input[type="checkbox"] {
     position: relative;
     width: 48px;
@@ -434,39 +528,4 @@ input[type="radio"]:checked + .card label {
     width: 100%;
     padding: 10px;
     cursor: pointer;
-}
-
-textarea {
-    resize: none;
-}
-
-input::placeholder, textarea::placeholder {
-    padding-left: 5px;
-    color: #DEDEDE;
-}
-
-
-
-/*------footer-------*/
-
-footer .flex {
-    align-items: center;
-}
-
-footer .copy {
-    flex: 4;
-}
-
-footer .socials {
-    flex: 1;
-}
-
-footer h4 {
-    flex: 1;
-    text-transform: uppercase;
-}
-
-
-.socials li {
-    display: inline-block;
-}
+}*/
