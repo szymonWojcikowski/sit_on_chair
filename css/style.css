@@ -145,13 +145,64 @@ ul {
 
 /*------section .slider-------*/
 
-.slider {
-    /*width: 1200px;*/
-    /*height: 500px;*/
+.slider input {
+    visibility: hidden;
+}
+
+.slide-select {
+    width: 0;
+    height: 0;
 }
 
 .slide-container {
     position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#slide-2 + .slide > img {
+    margin: 50px 0 0 90px;
+}
+
+.next, .prev {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    height: 100%;
+    line-height: 400px;
+    font-size: 3rem;
+    color: #27c7ab;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.next:hover, .prev:hover {
+    text-shadow: 1px 0 1px rgba(0, 0, 0, .8), -1px 0 1px rgba(0, 0, 0, .8);
+}
+
+input[type="radio"] + .slide {
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+input[type="radio"]:checked + .slide {
+    opacity: 1;
+    transition: opacity 0.4s;
 }
 
 .slide-layer {
@@ -180,7 +231,6 @@ ul {
 .products .flex {
     justify-content: space-around;
 }
-
 
 .products figure {
     position: relative;
@@ -419,7 +469,7 @@ input[type="radio"]:checked + .card label {
     top: 40px;
     left: 32px;
     border: 1px ridge #CECECE;
-    background: #27c7ab;
+    /*background: #27c7ab;*/
 }
 
 .contact-form input[type="checkbox"]:checked + label:before {
@@ -482,50 +532,3 @@ footer h4 {
 .socials li {
     display: inline-block;
 }
-
-
-/*-----------------------------------------
-.contact-form label[for="checkbox"] {
-    margin-top: 30px;
-    padding-left: 36px;
-    font-size: 1rem;
-    color: #C4C4C4;
-}
-.contact-form input[type="checkbox"] {
-    position: relative;
-    width: 48px;
-    height: 40px;
-    float: left;
-    border: 1px ridge #CECECE;
-}
-
-.contact-form input[type="checkbox"]:after {
-    content: "";
-    display: block;
-    width: 48px;
-    height: 40px;
-    position: absolute;
-    top: -2px;
-    left: -6px;
-    border: 1px ridge #CECECE;
-    background: #27c7ab;
-}
-
-.contact-form input[type="checkbox"]:checked:after {
-    content: "";
-    display: block;
-    width: 48px;
-    height: 40px;
-    position: absolute;
-    top: -2px;
-    left: -6px;
-    border: 1px ridge #CECECE;
-    background: #27c7ab url("../images/form_ok.jpg") no-repeat;
-}
-
-.contact-form label {
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    cursor: pointer;
-}*/

@@ -30,14 +30,43 @@
     </header>
     <section class="slider">
         <div class="wrapper">
-            <div class="slide-container">
-                <img src="images/black_chair.png" alt="Image of black chair">
-                <div class="slide-layer">
-                    <h2 class="slide-title">Sit <strong class="color--alt">on</strong> our <strong class="color--alt">chair</strong></h2>
-                    <p class="slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut deserunt doloribus eligendi impedit iste, perspiciatis rem reprehenderit unde voluptatum!</p>
-                    <button class="btn slide-action">Zobacz więcej</button>
-                </div>
-            </div>
+            <ul class="slide-container">
+                <input type="radio" name="slide-select" class="slide-select" id="slide-1" checked>
+                <li class="slide">
+                    <img src="images/black_chair.png" alt="Image of black chair">
+                    <div class="slide-layer">
+                        <h2 class="slide-title">Sit <strong class="color--alt">on</strong> our <strong class="color--alt">chair</strong></h2>
+                        <p class="slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut deserunt doloribus eligendi impedit iste, perspiciatis rem reprehenderit unde voluptatum!</p>
+                        <button class="btn slide-action">Zobacz więcej</button>
+                    </div>
+                    <label for="slide-2" class="next">&gt;</label>
+                    <label for="slide-3" class="prev">&lt;</label>
+                </li>
+
+                <input type="radio" name="slide-select" class="slide-select" id="slide-2">
+                <li class="slide">
+                    <img src="images/red_chair.png" alt="Image of black chair">
+                    <div class="slide-layer">
+                        <h2 class="slide-title">Move <strong class="color--alt">your</strong> ass</h2>
+                        <p class="slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut deserunt doloribus eligendi impedit iste, perspiciatis rem reprehenderit unde voluptatum!</p>
+                        <button class="btn slide-action">Zobacz więcej</button>
+                    </div>
+                    <label for="slide-3" class="next">&gt;</label>
+                    <label for="slide-1" class="prev">&lt;</label>
+                </li>
+
+                <input type="radio" name="slide-select" class="slide-select" id="slide-3">
+                <li class="slide">
+                    <img src="images/orange_chair.png" alt="Image of black chair">
+                    <div class="slide-layer">
+                        <h2 class="slide-title">Best <strong class="color--alt">price</strong> for <strong class="color--alt">us</strong></h2>
+                        <p class="slide-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut deserunt doloribus eligendi impedit iste, perspiciatis rem reprehenderit unde voluptatum!</p>
+                        <button class="btn slide-action">Zobacz więcej</button>
+                    </div>
+                    <label for="slide-1" class="next">&gt;</label>
+                    <label for="slide-2" class="prev">&lt;</label>
+                </li>
+            </ul>
         </div>
     </section>
     <section class="products">
@@ -158,57 +187,8 @@
                 <li><a href=""><img src="images/pinterest.png" alt="pintrest icon"></a></li>
                 <li><a href=""><img src="images/twitter.png" alt="twitter icon"></a></li>
             </ul>
-            <h4 class="logo">Sit <strong class="color--alt">on chair</strong></h4>
+            <h4 class="logo">Sit <strong class="color--alt">on</strong> chair</h4>
         </div>
     </footer>
 </body>
 </html>
-
-<!--
-<ul class="flex">
-            <li>
-                <label for="basic">
-                    <h3>... plan</h3>
-                    <div class="circle"><span class="price"></span><span class="currency"></span></div>
-                    <ul class="offer">
-                        <li>Zakup towaru + dowóz</li>
-                        <li>Zakup towaru + dowóz</li>
-                        <li>Zakup towaru + dowóz</li>
-                        <li>Zakup towaru + dowóz</li>
-                    </ul>
-                    <input type="radio" id="basic" name="plan-selection">
-                    <button class="btn">Dołacz</button>
-                </label>
-            </li>
-
-            <li>
-                <label for="standard">
-                    <h3>... plan</h3>
-                    <div class="circle"><span class="price"></span><span class="currency"></span></div>
-                    <ul class="offer">
-                        <li>Zakup towaru + dowóz</li>
-                        <li>Zakup towaru + dowóz</li>
-                        <li>Zakup towaru + dowóz</li>
-                        <li>Zakup towaru + dowóz</li>
-                    </ul>
-                    <input type="radio" id="standard" name="plan-selection" checked>
-                    <button class="btn">Dołacz</button>
-                </label>
-            </li>
-
-            <li>
-                <label for="advanced">
-                    <h3>... plan</h3>
-                    <div class="circle"><span class="price"></span><span class="currency"></span></div>
-                    <ul class="offer">
-                        <li>Zakup towaru + dowóz</li>
-                        <li>Zakup towaru + dowóz</li>
-                        <li>Zakup towaru + dowóz</li>
-                        <li>Zakup towaru + dowóz</li>
-                    </ul>
-                    <input type="radio" id="advanced" name="plan-selection">
-                    <button class="btn">Dołacz</button>
-                </label>
-            </li>
-        </ul>
--->
