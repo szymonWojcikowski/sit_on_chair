@@ -52,8 +52,10 @@ sup {
 }
 
 .btn {
+    display: inline-block;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
     height: 2.5rem;
     line-height: 2.5rem;
     font-size: 1.2rem;
@@ -292,7 +294,6 @@ input[type="radio"]:checked + .slide {
 
 input[type="radio"]:checked + .card {
     background-color: #27c7ab;
-/*    border: 1px solid #ffffff;*/
 }
 
 input[type="radio"]:checked + .card:before {
@@ -367,7 +368,7 @@ input[type="radio"]:checked + .card label {
 }
 
 .card label {
-    /*align-self: flex-end;*/
+    /*--align-self: flex-end; to nie zadziała, bo jest ustawiony flex-direction na column--*/
     position: absolute;
     margin: 20px auto 0;
     bottom: 10px;
@@ -394,8 +395,6 @@ input[type="radio"]:checked + .card label {
     font-size: 1.5rem;
     font-weight: 700;
 }
-
-
 
 /*------section .contact-form-------*/
 
@@ -439,17 +438,7 @@ input[type="radio"]:checked + .card label {
     margin-left: 36px;
 }
 
-
-
-/* --- Problem z FF, zamiast input:after ostylować checked + label:after---*/
 .contact-form input[type="checkbox"] {
-/*
-    position: relative;
-    width: 48px;
-    height: 40px;
-    float: left;
-    border: 1px ridge #CECECE;
-*/  
     height: 0;
     visibility: hidden;
 }
@@ -458,7 +447,6 @@ input[type="radio"]:checked + .card label {
     position: relative;
     padding-left: 30px;
 }
-
 
 .contact-form input[type="checkbox"] + label:before {
     content: "";
@@ -469,7 +457,6 @@ input[type="radio"]:checked + .card label {
     top: 40px;
     left: 32px;
     border: 1px ridge #CECECE;
-    /*background: #27c7ab;*/
 }
 
 .contact-form input[type="checkbox"]:checked + label:before {
@@ -507,8 +494,6 @@ input::placeholder, textarea::placeholder {
     color: #DEDEDE;
 }
 
-
-
 /*------footer-------*/
 
 footer .flex {
@@ -527,7 +512,6 @@ footer h4 {
     flex: 1;
     text-transform: uppercase;
 }
-
 
 .socials li {
     display: inline-block;
